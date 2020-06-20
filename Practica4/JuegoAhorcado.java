@@ -48,8 +48,10 @@ class JuegoAhorcado extends JFrame implements KeyListener{
       // if(indiceX==756) {
       //   indiceX=0;
       // }
+
+      monito.repaint();
 		}
-    monito.setLocation(x,y);
+    //monito.setLocation(x,y);
 	}
 
 	public void keyReleased(KeyEvent e)
