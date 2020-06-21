@@ -10,6 +10,7 @@ class JuegoAhorcado extends JFrame implements KeyListener{
   BufferedImage subImagen;
   Monito monito;
   int indiceX = 0;
+  int indice = 0;
 
   public JuegoAhorcado(){
     try {
@@ -40,7 +41,10 @@ class JuegoAhorcado extends JFrame implements KeyListener{
 		{
       // x = x+5;
 			// indiceX = ((indiceX + 1) % 5) * 126;
-      indiceX+=126;
+      //indiceX+=126;
+      
+      indiceX = ((indice)%7) * 126;
+      System.out.println("indiceX = "+indiceX);
       monito.imagen = imagen.getSubimage(indiceX,0,126,350);
       monito.revalidate();
       System.out.println("Se presiono");
@@ -50,6 +54,7 @@ class JuegoAhorcado extends JFrame implements KeyListener{
       // }
 
       monito.repaint();
+      indice++;
 		}
     //monito.setLocation(x,y);
 	}
